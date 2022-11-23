@@ -5,6 +5,8 @@ import sys
 
 
 def read_and_extract(filename):
+    '''Read and extract files'''
+
     with open(filename, encoding="utf8") as dat_file:
         lines = dat_file.readlines()
 
@@ -15,7 +17,7 @@ def read_and_extract(filename):
                 continue
 
             streamlined_data = line.strip().split()
-            
+
             day = streamlined_data[0]
             if not day.isdigit():
                 continue
